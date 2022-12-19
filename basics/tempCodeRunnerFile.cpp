@@ -1,0 +1,3 @@
+  ptr ->marks();
+//     ptr ->display();
+// }

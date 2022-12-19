@@ -1,0 +1,35 @@
+class Test{
+    public:
+        int a,b;
+        Test(){
+            a = 0;
+            b = 0;
+        }
+        Test(int x, int y){
+        a = x;
+        b = y;
+    }
+    Test operator+(Test t);
+    void disp();
+};
+
+Test Test :: operator+(Test t){
+    Test temp;
+    temp.a = a + t.a;
+    temp.b = b + t.b;
+    return temp;
+}
+
+void Test :: disp(){
+    cout << a << "," << b << endl;
+}
+int main() {
+
+    Test  t1 = Test(10,20);
+    Test t2 = Test(40,50);
+    Test t3 = t1 + t2;
+    t1.disp();
+    t2.disp();
+    t3.disp();
+    return 0;
+}
